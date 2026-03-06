@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import Combine
+
+@MainActor
+final class AppModeLiveStore: ObservableObject {
+    
+    @Published private(set) var appMode: AppMode = .gameSetup
+    
+    func goGameModel() {
+        appMode = .game
+    }
+    
+    func goSetupModel() {
+        appMode = .gameSetup
+    }
+}
