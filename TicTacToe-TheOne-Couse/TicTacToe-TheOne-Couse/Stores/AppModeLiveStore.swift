@@ -13,7 +13,7 @@ final class AppModeLiveStore: ObservableObject {
     
     @Published private(set) var appMode: AppMode = .gameSetup
     
-    func goGameModel() {
+    func goGameMode() {
         appMode = .game
     }
     

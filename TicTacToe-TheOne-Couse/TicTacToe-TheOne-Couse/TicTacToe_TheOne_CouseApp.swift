@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TicTacToe_TheOne_CouseApp: App {
+    @AppStorage(UserDefaultKeys.isDarkMode) private var isDarkMode: Bool = true
+    
+    
     var body: some Scene {
         WindowGroup {
             AppModeView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }
