@@ -23,10 +23,10 @@ extension Container {
 //      var boardLogicService: Factory<BoardLogicServiceProtocol> {
 //        self { MainActor.assumeIsolated { BoardLogicService() } }.singleton
 //      }
-//      
-//      var botEngineService: Factory<BotEngineServiceProtocol> {
-//        self { MainActor.assumeIsolated { BotEngineService() } }.singleton
-//      }
+      
+      var botEngineService: Factory<BotEngineServiceProtocol> {
+        self { MainActor.assumeIsolated { BotEngineService() } }.singleton
+      }
       
       var errorHandlerService: Factory<ErrorHandlerProtocol> {
         self { MainActor.assumeIsolated { ErrorHandlerService() } }.singleton
