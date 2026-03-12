@@ -16,9 +16,9 @@ extension Container {
         self { MainActor.assumeIsolated { GameSetupLiveStore() } }.singleton
       }
     
-//    var gameStore: Factory<GameStore> {
-//        self { MainActor.assumeIsolated { GameLiveStore() } }.singleton
-//      }
+    var gameStore: Factory<GameStore> {
+        self { MainActor.assumeIsolated { GameLiveStore() } }.singleton
+      }
       
       var boardLogicService: Factory<BoardLogicServiceProtocol> {
         self { MainActor.assumeIsolated { BoardLogicService() } }.singleton
