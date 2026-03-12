@@ -19,10 +19,10 @@ extension Container {
 //    var gameStore: Factory<GameStore> {
 //        self { MainActor.assumeIsolated { GameLiveStore() } }.singleton
 //      }
-//      
-//      var boardLogicService: Factory<BoardLogicServiceProtocol> {
-//        self { MainActor.assumeIsolated { BoardLogicService() } }.singleton
-//      }
+      
+      var boardLogicService: Factory<BoardLogicServiceProtocol> {
+        self { MainActor.assumeIsolated { BoardLogicService() } }.singleton
+      }
       
       var botEngineService: Factory<BotEngineServiceProtocol> {
         self { MainActor.assumeIsolated { BotEngineService() } }.singleton
