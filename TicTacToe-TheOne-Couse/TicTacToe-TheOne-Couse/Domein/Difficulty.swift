@@ -13,10 +13,19 @@ enum Difficulty: String, CaseIterable {
     case hard
 }
 
+//extension Difficulty: CustomStringConvertible {
+//    var description: String {
+//        rawValue.capitalized
+//    }
+//}
+    
+    
 extension Difficulty: CustomStringConvertible {
     var description: String {
-        rawValue.capitalized
+        switch self {
+        case .easy: "初級"
+        case .medium: "中級"
+        case .hard: "上級"
+        }
     }
 }
-    
-    

@@ -13,8 +13,19 @@ enum FirstTurn: String, CaseIterable {
     case random
 }
 
+//extension FirstTurn: CustomStringConvertible {
+//    var description: String {
+//        rawValue.capitalized
+//    }
+//}
+
+
 extension FirstTurn: CustomStringConvertible {
     var description: String {
-        rawValue.capitalized
+        switch self {
+        case .you: "あなた"
+        case .opponent: "対戦相手"
+        case .random: "ランダム"
+        }
     }
 }

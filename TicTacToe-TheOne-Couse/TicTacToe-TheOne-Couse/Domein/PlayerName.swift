@@ -17,8 +17,8 @@ enum PlayerName {
 extension PlayerName: CustomStringConvertible {
     var description: String {
         switch self {
-        case .player1: "player1"
-        case .player2: "player2"
+        case .player1: "対戦者1"
+        case .player2: "対戦者2"
         case .ai: "AI"
         }
     }

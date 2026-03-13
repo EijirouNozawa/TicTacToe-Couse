@@ -42,7 +42,7 @@ private extension GameSetupView {
     
     var welcomeText: some View {
         VStack(spacing: 8) {
-            Text("Tic Tac Toe")
+            Text("MaruBatsu Battle")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundStyle(Color.appTheme.accent)
@@ -59,12 +59,12 @@ private extension GameSetupView {
                 player2: $viewModel.player2
             )
             SelectionGroupView(
-                title: "Difficulty",
+                title: "難易度を選択",
                 options: Difficulty.allCases,
                 selected: $viewModel.selectedDifficulty
             )
             SelectionGroupView(
-                title: "Who Goes First?",
+                title: "始めるのは誰?",
                 options: FirstTurn.allCases,
                 selected: $viewModel.selectedFirstTurn
             )
@@ -74,7 +74,7 @@ private extension GameSetupView {
     var startButtleButton: some View {
         HStack(spacing: 5) {
             Image(systemName: "flame")
-            Text("Start Buttle")
+            Text("開始！")
         }
         .primaryButton()
         .button(.press) {

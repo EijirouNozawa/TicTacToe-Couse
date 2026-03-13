@@ -31,7 +31,7 @@ struct GameResultView: View {
 
 private extension GameResultView {
     var titleView: some View {
-        Text(gameState.isTied ? "🤝 It's a Tie!" : "🎉 Game Over!")
+        Text(gameState.isTied ? "🤝 ドロー！" : "🎉 ゲームオーバー!")
              .font(.title)
              .fontWeight(.bold)
              .foregroundStyle(gameState.isTied ? Color.appTheme.alternateAccent : Color.appTheme.success)
@@ -39,7 +39,7 @@ private extension GameResultView {
     
     func winnerPlayerView(_ winnerPlayer: Player) -> some View {
         HStack(spacing: 8) {
-          Text("Winner:")
+          Text("勝者:")
             .font(.title3)
             .fontWeight(.medium)
             .foregroundStyle(Color.appTheme.secondaryText)
@@ -64,7 +64,7 @@ private extension GameResultView {
       }
     
     var playAgainButton: some View {
-       Label("Play Again", systemImage: "arrow.counterclockwise.circle.fill")
+       Label("もう一度やる", systemImage: "arrow.counterclockwise.circle.fill")
          .primaryButton()
          .button(.press) {
            resetGame()
