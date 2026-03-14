@@ -1,1 +1,1 @@
-# TicTacToe-Couse
+# Maru-Batsu Battle
